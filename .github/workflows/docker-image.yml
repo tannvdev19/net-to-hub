@@ -36,6 +36,7 @@ jobs:
           
   push_to_ecr:
     name: Push docker image to ECR
+    needs: [push_to_registry]
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
